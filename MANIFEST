@@ -7,6 +7,7 @@ Makefile.PL
 README
 dist.ini
 lib/AnyEvent/Retry.pm
+lib/AnyEvent/Retry/Coro.pm
 lib/AnyEvent/Retry/Interval.pm
 lib/AnyEvent/Retry/Interval/API.pm
 lib/AnyEvent/Retry/Interval/Constant.pm
@@ -17,6 +18,7 @@ t/intervals/constant.t
 t/intervals/fib.t
 t/intervals/multi.t
 t/release-pod-syntax.t
+t/retry-basic-coro.t
 t/retry-basic.t
 t/retry-maxtimes.t
 t/retry-undef.t

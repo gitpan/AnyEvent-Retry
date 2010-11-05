@@ -1,6 +1,6 @@
 package AnyEvent::Retry;
 BEGIN {
-  $AnyEvent::Retry::VERSION = '0.01';
+  $AnyEvent::Retry::VERSION = '0.02';
 }
 # ABSTRACT: try something until it works
 use Moose;
@@ -192,7 +192,7 @@ AnyEvent::Retry - try something until it works
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -214,8 +214,7 @@ If you work for Aperture Science, something like this might be good:
         interval  => { Constant => { interval => 1 } }, # try every second
         try       => {
             my ($success, $error) = @_;
-            $cake--;
-            $error->('out of cake!') if --$cake =< 0;
+            $error->('out of cake!') if $cake-- < 0;
             do_science( on_success => $success, on_error => $error );
         },
 

@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval;
 BEGIN {
-  $AnyEvent::Retry::Interval::VERSION = '0.01';
+  $AnyEvent::Retry::Interval::VERSION = '0.02';
 }
 # ABSTRACT: role representing a time sequence generator for C<AnyEvent::Retry>
 use Moose::Role;
@@ -48,7 +48,7 @@ AnyEvent::Retry::Interval - role representing a time sequence generator for C<An
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 METHODS
 

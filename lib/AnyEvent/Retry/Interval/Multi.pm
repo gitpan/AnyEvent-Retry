@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval::Multi;
 BEGIN {
-  $AnyEvent::Retry::Interval::Multi::VERSION = '0.01';
+  $AnyEvent::Retry::Interval::Multi::VERSION = '0.02';
 }
 # ABSTRACT: combine multiple interval objects into one interval
 
@@ -81,7 +81,7 @@ AnyEvent::Retry::Interval::Multi - combine multiple interval objects into one in
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval::Fibonacci;
 BEGIN {
-  $AnyEvent::Retry::Interval::Fibonacci::VERSION = '0.01';
+  $AnyEvent::Retry::Interval::Fibonacci::VERSION = '0.02';
 }
 # ABSTRACT: fibonacci back-off
 use Moose;
@@ -37,7 +37,7 @@ AnyEvent::Retry::Interval::Fibonacci - fibonacci back-off
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

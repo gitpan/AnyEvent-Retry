@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval::API;
 BEGIN {
-  $AnyEvent::Retry::Interval::API::VERSION = '0.01';
+  $AnyEvent::Retry::Interval::API::VERSION = '0.02';
 }
 # ABSTRACT: API role that interval classes must implement
 use Moose::Role;
@@ -21,7 +21,7 @@ AnyEvent::Retry::Interval::API - API role that interval classes must implement
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SEE ALSO
 

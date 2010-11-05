@@ -22,6 +22,7 @@
       "runtime" : {
          "requires" : {
             "AnyEvent" : 0,
+            "Coro" : 0,
             "Math::Fibonacci" : 0,
             "Moose" : 0,
             "Moose::Role" : 0,
@@ -36,19 +37,20 @@
       },
       "test" : {
          "requires" : {
+            "Coro::AnyEvent" : 0,
             "Test::Exception" : 0,
             "Test::More" : 0,
             "ok" : 0
          }
       }
    },
-   "release_status" : "stable",
+   "release_status" : "testing",
    "resources" : {
       "repository" : {
          "url" : "http://github.com/jrockway/anyevent-retry"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -215,7 +217,7 @@
       "zilla" : {
          "class" : "Dist::Zilla::Dist::Builder",
          "config" : {
-            "is_trial" : 0
+            "is_trial" : 1
          },
          "version" : "4.102342"
       }

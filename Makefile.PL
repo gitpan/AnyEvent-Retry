@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'try something until it works',
   'AUTHOR' => 'Jonathan Rockway <jrockway@cpan.org>',
   'BUILD_REQUIRES' => {
+    'Coro::AnyEvent' => '0',
     'Test::Exception' => '0',
     'Test::More' => '0',
     'ok' => '0'
@@ -25,6 +26,7 @@ my %WriteMakefileArgs = (
   'NAME' => 'AnyEvent::Retry',
   'PREREQ_PM' => {
     'AnyEvent' => '0',
+    'Coro' => '0',
     'Math::Fibonacci' => '0',
     'Moose' => '0',
     'Moose::Role' => '0',
@@ -36,7 +38,7 @@ my %WriteMakefileArgs = (
     'namespace::autoclean' => '0',
     'true' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t t/intervals/*.t'
   }

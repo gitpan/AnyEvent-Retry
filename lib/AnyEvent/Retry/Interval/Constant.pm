@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval::Constant;
 BEGIN {
-  $AnyEvent::Retry::Interval::Constant::VERSION = '0.01';
+  $AnyEvent::Retry::Interval::Constant::VERSION = '0.02';
 }
 # ABSTRACT: a constant interval
 use Moose;
@@ -34,7 +34,7 @@ AnyEvent::Retry::Interval::Constant - a constant interval
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

@@ -3,6 +3,7 @@ abstract: 'try something until it works'
 author:
   - 'Jonathan Rockway <jrockway@cpan.org>'
 build_requires:
+  Coro::AnyEvent: 0
   Test::Exception: 0
   Test::More: 0
   ok: 0
@@ -17,6 +18,7 @@ meta-spec:
 name: AnyEvent-Retry
 requires:
   AnyEvent: 0
+  Coro: 0
   Math::Fibonacci: 0
   Moose: 0
   Moose::Role: 0
@@ -29,7 +31,7 @@ requires:
   true: 0
 resources:
   repository: http://github.com/jrockway/anyevent-retry
-version: 0.01
+version: 0.02
 x_Dist_Zilla:
   plugins:
     -
@@ -163,5 +165,5 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: 0
+      is_trial: 1
     version: 4.102342

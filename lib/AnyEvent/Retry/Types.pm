@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Types;
 BEGIN {
-  $AnyEvent::Retry::Types::VERSION = '0.01';
+  $AnyEvent::Retry::Types::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -46,7 +46,7 @@ AnyEvent::Retry::Types
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 
