@@ -3,7 +3,6 @@ abstract: 'try something until it works'
 author:
   - 'Jonathan Rockway <jrockway@cpan.org>'
 build_requires:
-  Coro::AnyEvent: 0
   Test::Exception: 0
   Test::More: 0
   ok: 0
@@ -18,7 +17,6 @@ meta-spec:
 name: AnyEvent-Retry
 requires:
   AnyEvent: 0
-  Coro: 0
   Math::Fibonacci: 0
   Moose: 0
   Moose::Role: 0
@@ -31,7 +29,7 @@ requires:
   true: 0
 resources:
   repository: http://github.com/jrockway/anyevent-retry
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -
@@ -147,6 +145,15 @@ x_Dist_Zilla:
       name: '@JROCKWAY/@Git/Push'
       version: 1.102810
     -
+      class: Dist::Zilla::Plugin::RemovePrereqs
+      config:
+        Dist::Zilla::Plugin::RemovePrereqs:
+          modules_to_remove:
+            - Coro
+            - Coro::AnyEvent
+      name: RemovePrereqs
+      version: 4.102342
+    -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
       version: 4.102342
@@ -165,5 +172,5 @@ x_Dist_Zilla:
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
-      is_trial: 1
+      is_trial: 0
     version: 4.102342

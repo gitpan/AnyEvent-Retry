@@ -1,13 +1,13 @@
 package AnyEvent::Retry::Interval::Multi;
 BEGIN {
-  $AnyEvent::Retry::Interval::Multi::VERSION = '0.02';
+  $AnyEvent::Retry::Interval::Multi::VERSION = '0.03';
 }
 # ABSTRACT: combine multiple interval objects into one interval
-
 use Moose;
-use namespace::autoclean;
-
 use AnyEvent::Retry::Types qw(Interval);
+
+use true;
+use namespace::autoclean;
 
 with 'AnyEvent::Retry::Interval';
 
@@ -69,7 +69,7 @@ sub check_condition {
     return $switch;
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 
 
@@ -81,7 +81,7 @@ AnyEvent::Retry::Interval::Multi - combine multiple interval objects into one in
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

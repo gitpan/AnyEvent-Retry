@@ -1,6 +1,6 @@
 package AnyEvent::Retry;
 BEGIN {
-  $AnyEvent::Retry::VERSION = '0.02';
+  $AnyEvent::Retry::VERSION = '0.03';
 }
 # ABSTRACT: try something until it works
 use Moose;
@@ -182,6 +182,8 @@ sub start {
     return;
 }
 
+__PACKAGE__->meta->make_immutable;
+
 
 
 =pod
@@ -192,7 +194,7 @@ AnyEvent::Retry - try something until it works
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

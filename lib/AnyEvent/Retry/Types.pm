@@ -1,9 +1,11 @@
 package AnyEvent::Retry::Types;
 BEGIN {
-  $AnyEvent::Retry::Types::VERSION = '0.02';
+  $AnyEvent::Retry::Types::VERSION = '0.03';
 }
+# ABSTRACT: Types used internally by C<AnyEvent::Retry>
 use strict;
 use warnings;
+use true;
 
 use MooseX::Types -declare => ['Interval'];
 use MooseX::Types::Moose qw(Str HashRef);
@@ -35,18 +37,16 @@ coerce Interval, from HashRef, via {
     return $name->new($args);
 };
 
-1;
-
 __END__
 =pod
 
 =head1 NAME
 
-AnyEvent::Retry::Types
+AnyEvent::Retry::Types - Types used internally by C<AnyEvent::Retry>
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 AUTHOR
 

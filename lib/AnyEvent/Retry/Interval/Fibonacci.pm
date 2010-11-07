@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Interval::Fibonacci;
 BEGIN {
-  $AnyEvent::Retry::Interval::Fibonacci::VERSION = '0.02';
+  $AnyEvent::Retry::Interval::Fibonacci::VERSION = '0.03';
 }
 # ABSTRACT: fibonacci back-off
 use Moose;
@@ -8,6 +8,7 @@ use MooseX::Types::Common::Numeric qw(PositiveNum);
 
 use Math::Fibonacci qw(term);
 
+use true;
 use namespace::autoclean;
 
 with 'AnyEvent::Retry::Interval';
@@ -25,7 +26,7 @@ sub next {
     return $self->scale * term($i);
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 
 
@@ -37,7 +38,7 @@ AnyEvent::Retry::Interval::Fibonacci - fibonacci back-off
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

@@ -1,10 +1,11 @@
 package AnyEvent::Retry::Interval::Constant;
 BEGIN {
-  $AnyEvent::Retry::Interval::Constant::VERSION = '0.02';
+  $AnyEvent::Retry::Interval::Constant::VERSION = '0.03';
 }
 # ABSTRACT: a constant interval
 use Moose;
 use MooseX::Types::Common::Numeric qw(PositiveNum);
+use true;
 use namespace::autoclean;
 
 with 'AnyEvent::Retry::Interval';
@@ -22,7 +23,7 @@ sub next {
     return $self->interval;
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 
 
@@ -34,7 +35,7 @@ AnyEvent::Retry::Interval::Constant - a constant interval
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

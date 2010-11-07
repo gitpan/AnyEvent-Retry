@@ -1,6 +1,6 @@
 package AnyEvent::Retry::Coro;
 BEGIN {
-  $AnyEvent::Retry::Coro::VERSION = '0.02';
+  $AnyEvent::Retry::Coro::VERSION = '0.03';
 }
 # ABSTRACT: AnyEvent::Retry for jobs that run in separate threads
 use Moose;
@@ -81,6 +81,8 @@ sub run {
     $class->wait;
 }
 
+__PACKAGE__->meta->make_immutable;
+
 
 
 =pod
@@ -91,7 +93,7 @@ AnyEvent::Retry::Coro - AnyEvent::Retry for jobs that run in separate threads
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
